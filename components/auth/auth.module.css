@@ -24,11 +24,11 @@
 .input {
     display: block;
     width: 100%;
-    border: none;
+    border: 1px solid var(--foreground-rgb);
+    border-radius: 1rem;
     outline: none;
     padding: 1.2rem;
     background: rgba(255, 255, 255, 0.15);
-    color: white;
     margin-top: 1rem;
     font-size: 1rem;
 }
@@ -37,15 +37,19 @@
     color: white;
 }
 
-.input[type="submit"] {
+.submit {
     background: #cc33cc;
     opacity: 0.7;
+    border: 1px solid var(--foreground-rgb);
+    border-radius: 1rem;
     transition: all 300ms ease;
     cursor: pointer;
-    transition: all 300ms ease;
+    margin-top: 1rem;
+    padding: 1.2rem;
+    width: 100%;
 }
 
-.input[type="submit"]:hover {
+.submit:hover {
     opacity: 1;
 }
 
