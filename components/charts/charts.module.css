@@ -1,0 +1,42 @@
+
+.chart {
+    background: var(--background-secondary);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    margin-top: 1rem;
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+}
+
+.progress {
+    position: relative;
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+}
+
+.progress > svg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.circle {
+    fill: none;
+    stroke: var(--color-primary);
+    stroke-width: 14;
+    stroke-linecap: round;
+    stroke-dasharray: 270;
+    stroke-dashoffset: 310;
+}
+
+.percentage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

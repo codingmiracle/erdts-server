@@ -38,7 +38,7 @@ const LoginForm = observer(function LoginForm({defaulttype} : LoginFormProps) {
                     <input className={styles.input} type="text" placeholder="Username" onChange={(event => {loginStore.username = event.target.value})}/>
                     <input className={styles.input} type="password" placeholder="Password" onChange={(event => {loginStore.password = event.target.value})}/>
                     <button className={styles.submit} onClick={login}>Login</button>
-                    <div className={styles.block}>Don't have an account? <label onClick={() => {setState("signup")}}>Sign Up</label></div>
+                    <div className={styles.block}>Don't have an account? <label onClick={() => {loginStore.initialize();setState("signup")}}>Sign Up</label></div>
                 </div>
             </div>
         );
@@ -53,7 +53,7 @@ const LoginForm = observer(function LoginForm({defaulttype} : LoginFormProps) {
                     <input className={styles.input} type="password" placeholder="Password" onChange={(event => {loginStore.password = event.target.value})}/>
                     <input className={styles.input} type="password" placeholder="Confirm Password" onChange={(event => {loginStore.confirmPassword = event.target.value})}/>
                     <button className={styles.submit} onClick={register}>Create Account</button>
-                    <div className={styles.block}>Already have an account? <label onClick={() => {setState("login")}}>Sign In</label></div>
+                    <div className={styles.block}>Already have an account? <label onClick={() => {loginStore.initialize(); setState("login")}}>Sign In</label></div>
                 </div>
             </div>
         );

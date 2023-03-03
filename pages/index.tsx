@@ -1,10 +1,5 @@
 import Head from 'next/head'
-import {Inter} from '@next/font/google'
-import styles from '../styles/Home.module.css'
-import LoginFormComponent from "../components/auth/login.form.component";
-import {useState} from "react";
-
-const inter = Inter({subsets: ['latin']})
+import CircleBarComponent from "../components/charts/circleBar.component";
 
 const Home = () => {
 
@@ -16,8 +11,8 @@ const Home = () => {
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
-            <main className={styles.main}>
-                <LoginFormComponent defaulttype={"login"} />
+            <main>
+                <CircleBarComponent title={"Title"} content={"data datatype"} percent={69}/>
             </main>
         </>
     )
