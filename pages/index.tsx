@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import CircleBarComponent from "../components/charts/circleBar.component";
+import InputComponent from "../components/input/input.component";
 
 const Home = () => {
 
@@ -13,6 +14,7 @@ const Home = () => {
             </Head>
             <main>
                 <CircleBarComponent title={"Title"} content={"data datatype"} percent={69}/>
+                <InputComponent placeholder={"SessionID"} onSubmit={ ()=> {console.log("Submitted")} }/>
             </main>
         </>
     )
