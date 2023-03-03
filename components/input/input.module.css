@@ -13,12 +13,12 @@
 }
 
 .input:focus {
-    border: 2px solid #fa4753;
-    caret-color: #fa4753;
-    color: #fa4753;
+    border: 2px solid #7380ec;
+    caret-color: #7380ec;
+    color: #7380ec;
     box-shadow: 4px 4px 10px #070707;
 }
 
 .input:focus::placeholder {
-    color: #fa4753;
+    color: #7380ec;
 }

@@ -14,7 +14,9 @@ const Home = () => {
             </Head>
             <main>
                 <CircleBarComponent title={"Title"} content={"data datatype"} percent={69}/>
-                <InputComponent placeholder={"SessionID"} onSubmit={ ()=> {console.log("Submitted")} }/>
+                <InputComponent placeholder={"SessionID"} onSubmit={ (msg:string)=> {console.log(msg)} }/>
+                <InputComponent placeholder={"SessionID"} onSubmit={ (msg:string)=> {console.log("Msg Submitted:" + msg)} }/>
+
             </main>
         </>
     )
