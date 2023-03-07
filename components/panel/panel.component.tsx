@@ -5,7 +5,8 @@ import ChartComponent from "../charts/chart.component";
 import InputComponent from "../input/input.component";
 import CardComponent from "../charts/card.component";
 import {Button} from "@mui/material";
-import styles from './panel.module.css'
+import {BackbuttonComponent} from "./backbutton.component";
+import {stat} from "fs";
 
 type Props = {};
 type State = {
@@ -26,11 +27,25 @@ export default class PanelComponent extends React.Component<Props, State> {
         }))
     }
 
+    onBackPress = (e) => {
+        console.log(e);
+        this.setState(state => ({
+            inSession: false
+        }))
+    }
+
     render() {
         return (
             <>
                 {this.state.inSession ? (
                     <>
+
+                        <div className="flex-container">
+
+                            <BackbuttonComponent onClick={this.onBackPress}> </BackbuttonComponent>
+
+                        </div>
+
                         <div className="flex-container">
                             <CircleBarComponent title={"Title"} content={"data datatype"} percent={69}/>
                             <CircleBarComponent title={"Title"} content={"data datatype"} percent={69}/>
@@ -50,17 +65,18 @@ export default class PanelComponent extends React.Component<Props, State> {
                     </>
                 ) : (
                     <CardComponent>
-                        <div className={styles.cardBlock}>
+                        <div className="card-block">
                             <h3>Start a new Session:</h3>
                             The token is a 5-digit string shown on the display
                         </div>
-                        <div className={styles.inputContainer}>
+                        <div className="input-container">
                             <InputComponent placeholder={"token"} onSubmit={this.onTokenSubmit} id={this.tokenInputId}/>
                             <Button variant={"contained"} size={"large"} style={{
                                 borderRadius: "1rem",
                                 fontFamily: "monospace",
                                 background: "#7380ec",
                             }} onClick={() => {
+                                // @ts-ignore
                                 let token = document.getElementById(this.tokenInputId).value
                                 this.onTokenSubmit(token);
                             }}>

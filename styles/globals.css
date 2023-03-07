@@ -129,7 +129,19 @@ input {
   max-width: calc(100vw - 12rem);
 }
 
+.card-block {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
 
+.input-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-container > button{
+  margin-left: 1.5rem;
+}
 
 @media (prefers-color-scheme: dark) {
   html {
