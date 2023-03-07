@@ -5,6 +5,7 @@ import ChartComponent from "../charts/chart.component";
 import InputComponent from "../input/input.component";
 import CardComponent from "../charts/card.component";
 import {Button} from "@mui/material";
+import {BackbuttonComponent} from "./backbutton.component";
 
 type Props = {};
 type State = {
@@ -30,6 +31,10 @@ export default class PanelComponent extends React.Component<Props, State> {
             <>
                 {this.state.inSession ? (
                     <>
+
+                        <BackbuttonComponent> </BackbuttonComponent>
+
+
                         <div className="flex-container">
                             <CircleBarComponent title={"Title"} content={"data datatype"} percent={69}/>
                             <CircleBarComponent title={"Title"} content={"data datatype"} percent={69}/>
