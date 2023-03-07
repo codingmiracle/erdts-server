@@ -1,0 +1,9 @@
+.card-block {
+    display: inline-block;
+    margin-bottom: .5rem;
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-between;
+}

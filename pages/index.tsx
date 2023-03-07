@@ -1,7 +1,5 @@
 import Head from 'next/head'
-import CircleBarComponent from "../components/charts/circleBar.component";
-import InputComponent from "../components/input/input.component";
-import ChartComponent from "../components/charts/chart.component";
+import PanelComponent from "../components/panel/panel.component";
 
 
 const Home = () => {
@@ -15,21 +13,8 @@ const Home = () => {
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
             <main>
-                <InputComponent placeholder={"SessionID"} onSubmit={ (msg:string)=> {console.log(msg)} }/>
 
-                <div className="topcontainer">
-                    <CircleBarComponent title={"Title"} content={"data datatype"} percent={69}/>
-                    <CircleBarComponent title={"Title"} content={"data datatype"} percent={69}/>
-                    <CircleBarComponent title={"Title"} content={"data datatype"} percent={69}/>
-                </div>
-
-
-                <div className="grid-container">
-                    <div className="grid-item"><ChartComponent title={"Session Health"} data={[]}></ChartComponent></div>
-                    <div className="grid-item"><ChartComponent title={"Speed"} data={[]}></ChartComponent></div>
-                    <div className="grid-item"><ChartComponent title={"Battery %"} data={[]}></ChartComponent></div>
-                    <div className="grid-item"><ChartComponent title={"Data Transfers"} data={[]}></ChartComponent></div>
-                </div>
+                <PanelComponent></PanelComponent>
 
             </main>
         </>

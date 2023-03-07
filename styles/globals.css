@@ -28,7 +28,7 @@
   --card-padding: 1.8rem;
   --padding-1: 1.2rem;
 
-  --box-shadow: 0 2rem 3rem var(--color-shaddow);
+  --box-shadow: 0 1.5rem 1.5rem var(--color-shaddow);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -61,7 +61,7 @@ body {
 main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
@@ -107,24 +107,26 @@ input {
   color: var(--foreground-primary);
 }
 
-.topcontainer {
+.flex-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  height: 100px;
-  padding: 120px 20px;
+  height: fit-content;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fill, 750px);
   grid-template-rows: repeat(2, 1fr);
   grid-gap: 5px;
+  width: 100%;
 }
 
 .grid-item {
-  padding: 5px;
+  max-width: calc(100vw - 12rem);
 }
 
 
