@@ -3,6 +3,7 @@ import CircleBarComponent from "../components/charts/circleBar.component";
 import InputComponent from "../components/input/input.component";
 import ChartComponent from "../components/charts/chart.component";
 
+
 const Home = () => {
 
     return (
@@ -29,11 +30,6 @@ const Home = () => {
                     <div className="grid-item"><ChartComponent title={"Battery %"} data={[]}></ChartComponent></div>
                     <div className="grid-item"><ChartComponent title={"Data Transfers"} data={[]}></ChartComponent></div>
                 </div>
-
-
-
-
-
 
             </main>
         </>
