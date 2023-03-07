@@ -65,6 +65,7 @@
   "keyToString": {
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "C:/Users/dagra/WebDev/react/erdts-server",
+
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
@@ -162,6 +163,8 @@
       <workItem from="1677953524731" duration="4332000" />
       <workItem from="1678194088864" duration="2017000" />
       <workItem from="1678197386499" duration="9390000" />
+      <workItem from="1678207498307" duration="513000" />
+      <workItem from="1678208019636" duration="2039000" />
     </task>
     <task id="LOCAL-00001" summary="add: Login">
       <created>1673374980939</created>
