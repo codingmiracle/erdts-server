@@ -3,9 +3,9 @@
     background: var(--background-secondary);
     padding: var(--card-padding);
     border-radius: var(--card-border-radius);
-    margin-top: 1rem;
     box-shadow: var(--box-shadow);
     transition: all 300ms ease;
+    margin: 1rem;
 }
 
 .progress {

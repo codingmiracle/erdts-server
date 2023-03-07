@@ -4,6 +4,9 @@
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+  --font-primary: 'Roboto Mono', Arial, Menlo, Monaco,
+  'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace',
+  'Fira Mono', 'Droid Sans Mono', 'Courier New';
 
   --foreground-primary: #212121;
   --background-primary: #f6f6f9;
@@ -52,6 +55,7 @@ body {
 body {
   color: var(--foreground-primary);
   background: var(--background-primary);
+  font-family: var(--font-primary);
 }
 
 main {
@@ -101,6 +105,26 @@ input {
   transform: translateY(-50%) scale(0.8);
   padding: 0 .2em;
   color: var(--foreground-primary);
+}
+
+.topcontainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  padding: 120px 20px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 5px;
+}
+
+.grid-item {
+  padding: 5px;
 }
 
 
