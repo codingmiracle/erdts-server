@@ -3,16 +3,15 @@ import * as React from 'react';
 import {Chart} from "react-chartjs-2";
 import styles from "./charts.module.css";
 import {
-    Chart as ChartJS,
     CategoryScale,
+    Chart as ChartJS,
+    Legend,
     LinearScale,
-    PointElement,
     LineElement,
+    PointElement,
     Title,
     Tooltip,
-    Legend,
 } from 'chart.js';
-import { Line } from 'react-chartjs-2';
 import {random} from "nanoid";
 
 ChartJS.register(
@@ -60,7 +59,8 @@ export const data = {
 
 type Props = {
     title: string,
-    data: any
+    data: object[],
+
 };
 type State = {
 

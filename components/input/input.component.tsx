@@ -1,22 +1,21 @@
-// @flow
 import * as React from 'react';
 import styles from './input.module.css';
-import {TextField} from "@mui/material";
-
 
 type Props = {
     placeholder: string;
     onSubmit: Function;
+    id: string
 };
 type State = {};
 
-export class InputComponent extends React.Component<Props, State> {
+export default class InputComponent extends React.Component<Props, State> {
     render() {
         return (
-            <div>
-                <input className={styles.input} placeholder={this.props.placeholder}
-                       color="white"
-                       name="text"
+            <>
+                <input className={styles.input}
+                       placeholder={this.props.placeholder}
+                       id={this.props.id}
+                       name={this.props.id}
                        type="text"
                        onKeyPress={(e) => {
                            if (e.key === 'Enter') {
@@ -28,9 +27,7 @@ export class InputComponent extends React.Component<Props, State> {
                 />
 
 
-            </div>
+            </>
         );
     };
 };
-
-export default InputComponent;

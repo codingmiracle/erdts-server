@@ -1,4 +1,3 @@
-// @flow
 import * as React from 'react';
 import styles from './charts.module.css'
 
@@ -11,7 +10,7 @@ type State = {
 
 };
 
-export class CircleBarComponent extends React.Component<Props, State> {
+export default class CircleBarComponent extends React.Component<Props, State> {
     render() {
         return (
             <div className={styles.chart}>
@@ -34,6 +33,4 @@ export class CircleBarComponent extends React.Component<Props, State> {
             </div>
         );
     };
-}
-
-export default CircleBarComponent;
+};
