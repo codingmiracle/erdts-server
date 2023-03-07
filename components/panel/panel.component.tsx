@@ -6,6 +6,7 @@ import InputComponent from "../input/input.component";
 import CardComponent from "../charts/card.component";
 import {Button} from "@mui/material";
 import {BackbuttonComponent} from "./backbutton.component";
+import {stat} from "fs";
 
 type Props = {};
 type State = {
@@ -26,14 +27,24 @@ export default class PanelComponent extends React.Component<Props, State> {
         }))
     }
 
+    onBackPress = (e) => {
+        console.log(e);
+        this.setState(state => ({
+            inSession: false
+        }))
+    }
+
     render() {
         return (
             <>
                 {this.state.inSession ? (
                     <>
 
-                        <BackbuttonComponent> </BackbuttonComponent>
+                        <div className="flex-container">
 
+                            <BackbuttonComponent onClick={this.onBackPress}> </BackbuttonComponent>
+
+                        </div>
 
                         <div className="flex-container">
                             <CircleBarComponent title={"Title"} content={"data datatype"} percent={69}/>

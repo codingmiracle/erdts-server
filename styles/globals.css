@@ -139,6 +139,10 @@ input {
   justify-content: space-between;
 }
 
+.flex-container > button{
+  margin-left: 1.5rem;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
