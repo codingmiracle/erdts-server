@@ -1,5 +1,5 @@
 import { makeAutoObservable } from "mobx";
-import { RootStore } from ".";
+import { RootStore } from "./root.store";
 import { LoginDto } from "../dto/auth/login.dto";
 import { RegisterDto } from "../dto/auth/register.dto";
 import { SessionUserDto } from "../dto/auth/session-user.dto";

@@ -2,6 +2,7 @@ import * as React from 'react';
 import styles from './input.module.css';
 import Tooltip from '@mui/material/Tooltip';
 
+
 type Props = {
     placeholder: string;
     onSubmit: Function;
@@ -14,6 +15,7 @@ export default class InputComponent extends React.Component<Props, State> {
 
         return (
             <>
+
                 <Tooltip title={"Enter at least 5 characters"}>
                     <input className={styles.input}
                            placeholder={this.props.placeholder}

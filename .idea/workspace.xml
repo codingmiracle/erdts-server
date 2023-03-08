@@ -5,8 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd7a1310-6611-4854-b58b-33b4f6dd3345" name="Changes" comment="add: circleBar">
+
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dto/data/data.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dto/session/session-status.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dto/session/session.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/data.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/session.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/data.store.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/session.store.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/input/input.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/input/input.component.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/auth/login.form.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/auth/login.form.component.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/base-http.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/base-http.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/root.store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/login.store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/login.store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/user.store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/user.store.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,19 +31,21 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
         <option value="CSS File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
+
         <entry key="$PROJECT_DIR$" value="add-styles" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -61,6 +77,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "WebServerToolWindowFactoryState": "false",
@@ -130,9 +147,11 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.dev" />
+
         <item itemvalue="npm.lint" />
         <item itemvalue="npm.start" />
         <item itemvalue="npm.build" />
+
       </list>
     </recent_temporary>
   </component>
