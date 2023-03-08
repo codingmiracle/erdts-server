@@ -5,26 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd7a1310-6611-4854-b58b-33b4f6dd3345" name="Changes" comment="add: circleBar">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_03_2023_18_49_[Changes]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_03_2023_18_49__Changes_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/charts/card.component.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/panel/panel.component.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/panel/panel.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/erdts-server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Serial.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/charts/chart.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/charts/chart.component.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/charts/charts.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/components/charts/charts.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/charts/circleBar.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/charts/circleBar.component.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/input/input.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/input/input.component.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/input/input.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/components/input/input.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dto/data/data.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dto/session/session-status.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dto/session/session.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/data.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/session.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/data.store.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/session.store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/auth/login.form.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/auth/login.form.component.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/base-http.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/base-http.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/root.store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/login.store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/login.store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/user.store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/user.store.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,9 +30,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
         <option value="CSS File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -48,6 +43,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -81,8 +77,9 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/dagra/WebDev/react/erdts-server&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/dagra/WebDev/react/erdts-server/src/services&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
@@ -96,7 +93,11 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dagra\WebDev\react\erdts-server\src\services" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dagra\WebDev\react\erdts-server\src\dto\session" />
       <recent name="C:\Users\dagra\WebDev\react\erdts-server\pages\api" />
       <recent name="C:\Users\dagra\WebDev\react\erdts-server\components\auth" />
       <recent name="C:\Users\dagra\WebDev\react\erdts-server\components" />
@@ -147,9 +148,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.dev" />
-        <item itemvalue="npm.lint" />
         <item itemvalue="npm.start" />
+        <item itemvalue="npm.lint" />
         <item itemvalue="npm.build" />
+        <item itemvalue="npm.dev" />
       </list>
     </recent_temporary>
   </component>
@@ -180,6 +182,7 @@
       <workItem from="1677953524731" duration="4332000" />
       <workItem from="1678194088864" duration="2017000" />
       <workItem from="1678197386499" duration="9390000" />
+      <workItem from="1678260705872" duration="1404000" />
     </task>
     <task id="LOCAL-00001" summary="add: Login">
       <created>1673374980939</created>

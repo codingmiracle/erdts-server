@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import styles from './auth.module.css'
 import {observer} from "mobx-react-lite";
-import {useStores} from "../../src/store";
+import {useStores} from "../../src/store/root.store";
 
 
 interface LoginFormProps {

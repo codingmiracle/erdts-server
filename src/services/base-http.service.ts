@@ -6,7 +6,7 @@ import { APIResponse } from "../dto/api/api-response";
 // Taken from https://github.com/arielweinberger/task-management-frontend/blob/master/src/services/base-http.service.js
 
 export default class BaseHttpService {
-    BASE_URL = process.env.BASE_URL || "http://localhost:3000";
+    BASE_URL = process.env.BASE_URL || "http://localhost:3001";
 
     //   _accessToken: string = null;
 

@@ -1,4 +1,4 @@
-import {RootStore} from "./index";
+import {RootStore} from "./root.store";
 import {makeAutoObservable, observable} from "mobx";
 
 export default class LoginStore {
