@@ -12,7 +12,6 @@ import {
     Title,
     Tooltip,
 } from 'chart.js';
-import {random} from "nanoid";
 
 ChartJS.register(
     CategoryScale,
@@ -24,54 +23,44 @@ ChartJS.register(
     Legend
 );
 
-export const options = {
-    responsive: true,
-    plugins: {
-        legend: {
-            position: 'top' as const,
-        },
-        title: {
-            display: true,
-            text: 'Chart.js Line Chart',
-        },
-    },
-};
-
-const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
-
-export const data = {
-    labels,
-    datasets: [
-        {
-            label: 'Dataset 1',
-            data: labels.map(() => random(2)),
-            borderColor: 'rgb(255, 99, 132)',
-            backgroundColor: 'rgba(255, 99, 132, 0.5)',
-        },
-        {
-            label: 'Dataset 2',
-            data: labels.map(() => random(2)),
-            borderColor: 'rgb(53, 162, 235)',
-            backgroundColor: 'rgba(53, 162, 235, 0.5)',
-        },
-    ],
-};
-
 type Props = {
     title: string,
-    data: object[],
-
+    data: number[],
+    timestamps: number[]
 };
-type State = {
+type State = {};
 
-};
 
 export default class ChartComponent extends React.Component<Props, State> {
+
     render() {
+        const options = {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top' as const,
+                },
+                title: {
+                    display: true,
+                    text: this.props.title,
+                },
+            },
+        };
+        const data = {
+            labels: this.props.timestamps,
+            datasets: [
+                {
+                    label: this.props.title,
+                    data: this.props.timestamps.map((index) => this.props.data[index]),
+                    borderColor: 'rgb(53, 162, 235)',
+                    backgroundColor: 'rgba(53, 162, 235, 0.5)',
+                },
+            ]
+        };
         return (
             <div className={styles.chart}>
-                <h3>{this.props.title}</h3>
-                <Chart type={"line"} data={data}></Chart>
+
+                <Chart type={"line"} data={data} options={options}></Chart>
             </div>
         );
     };
