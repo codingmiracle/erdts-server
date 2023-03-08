@@ -6,5 +6,6 @@ export default class DataService extends BaseHttpService {
         return (await this.get<DataDto[]>(
             "/data"
         )) as DataDto[]
+
     }
 }

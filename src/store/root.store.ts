@@ -7,6 +7,7 @@ import SessionService from "../services/session.service";
 import DataStore from "./data.store";
 import DataService from "../services/data.service";
 
+
 export class RootStore {
     public userStore: UserStore;
     public loginStore: LoginStore;
