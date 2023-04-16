@@ -6,12 +6,12 @@ import BaseHttpService from "./base-http.service";
 export default class AuthService extends BaseHttpService {
     async login(loginDto: LoginDto): Promise<SessionUserDto> {
         return (await this.post<SessionUserDto>(
-            "/api/auth/login",
+            "/login",
             loginDto
         )) as SessionUserDto;
     }
 
     async register(registerDto: RegisterDto): Promise<void> {
-        return await this.post("/api/auth/register", registerDto);
+        return await this.post("/register", registerDto);
     }
 }

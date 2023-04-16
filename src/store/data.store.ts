@@ -1,6 +1,7 @@
 import {RootStore} from "./root.store";
-import {makeAutoObservable} from "mobx";
+import {action, computed, makeAutoObservable} from "mobx";
 import DataService from "../services/data.service";
+import {DataDto} from "../dto/data/data.dto";
 
 
 export default class DataStore {
@@ -8,11 +9,11 @@ export default class DataStore {
     accelarations: number[]
     batteryVoltages: number[]
     timeStamps: number[]
+    private dataService: DataService;
 
     constructor(
-        private readonly rootStore: RootStore,
-        private readonly dataService: DataService
     ) {
+        this.dataService = new DataService();
         this.temperatures = [];
         this.accelarations = [];
         this.batteryVoltages = [];
@@ -20,9 +21,22 @@ export default class DataStore {
         makeAutoObservable(this);
     }
 
+    @computed
+    getTimeStamps() {
+        return this.timeStamps
+    }
+
+    @computed
+    getTemperatures() {
+        return this.temperatures
+    }
+
+    @computed
     async fetch(): Promise<void> {
         await this.dataService.fetch()
             .then((data) => {
+                console.log(typeof(data))
+                console.log(data)
                 data.map(d => {
                     this.temperatures.push(d.temperature);
                     this.accelarations.push(d.accelaration);

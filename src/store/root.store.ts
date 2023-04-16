@@ -21,7 +21,7 @@ export class RootStore {
         this.userStore = new UserStore(this, authService);
         this.loginStore = new LoginStore(this);
         this.sessionStore = new SessionStore(this, sessionService);
-        this.dataStore = new DataStore(this, dataService);
+        this.dataStore = new DataStore();
     }
 }
 

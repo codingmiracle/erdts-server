@@ -1,18 +1,11 @@
-// @flow
-import * as React from 'react';
+import {observer} from "mobx-react-lite";
+import {useEffect} from "react";
+import * as React from "react";
+import styles from "./charts.module.css"
 import {Chart} from "react-chartjs-2";
-import styles from "./charts.module.css";
-import {
-    CategoryScale,
-    Chart as ChartJS,
-    Legend,
-    LinearScale,
-    LineElement,
-    PointElement,
-    Title,
-    Tooltip,
-} from 'chart.js';
-
+import {CategoryScale, Chart as ChartJS, Legend, LinearScale, LineElement, PointElement, Title, Tooltip} from "chart.js";
+import ChartStore from "../../src/store/chart.store";
+import {color, style} from "@mui/system";
 ChartJS.register(
     CategoryScale,
     LinearScale,
@@ -23,45 +16,40 @@ ChartJS.register(
     Legend
 );
 
+
 type Props = {
     title: string,
-    data: number[],
-    timestamps: number[]
+    chartStore: ChartStore
 };
-type State = {};
 
+export const ChartComponent = observer((props: Props) => {
+    useEffect(() => {
+        let timeoutFlag = 0;
+        if(!timeoutFlag) {
+            timeoutFlag = 1
+            setTimeout(()=> {
+                props.chartStore.increment()
+                timeoutFlag = 0
+            }, 100)
+        }
+    })
 
-export default class ChartComponent extends React.Component<Props, State> {
-
-    render() {
-        const options = {
-            responsive: true,
-            plugins: {
-                legend: {
-                    position: 'top' as const,
-                },
-                title: {
-                    display: true,
-                    text: this.props.title,
-                },
-            },
-        };
-        const data = {
-            labels: this.props.timestamps,
-            datasets: [
+    const options = {
+        scales: {
+            yAxes: [
                 {
-                    label: this.props.title,
-                    data: this.props.timestamps.map((index) => this.props.data[index]),
-                    borderColor: 'rgb(53, 162, 235)',
-                    backgroundColor: 'rgba(53, 162, 235, 0.5)',
+                    ticks: {
+                        beginAtZero: true,
+                    },
                 },
-            ]
-        };
-        return (
-            <div className={styles.chart}>
-
-                <Chart type={"line"} data={data} options={options}></Chart>
-            </div>
-        );
+            ],
+        },
     };
-};
+    return (
+        <div className={styles.chart}>
+            <h3>{props.title}</h3>
+            <Chart type={"line"} data={props.chartStore.getChartdata(props.title)} ></Chart>
+            <span style={{color:"#575859"}}>Runtime: {props.chartStore.secondsPassed}</span>
+        </div>
+    )
+})

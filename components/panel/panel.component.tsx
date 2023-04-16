@@ -1,12 +1,13 @@
 // @flow
 import * as React from 'react';
 import CircleBarComponent from "../charts/circleBar.component";
-import ChartComponent from "../charts/chart.component";
 import InputComponent from "../input/input.component";
 import CardComponent from "../charts/card.component";
 import {Button} from "@mui/material";
 import {BackbuttonComponent} from "./backbutton.component";
 import {stat} from "fs";
+import {ChartComponent} from "../charts/chart.component";
+import ChartStore from "../../src/store/chart.store";
 
 
 type Props = {};
@@ -22,7 +23,7 @@ export default class PanelComponent extends React.Component<Props, State> {
 
     tokenInputId = "token"
     onTokenSubmit = (token: string) => {
-        console.log(token);
+        console.log("token", token);
         this.setState(state => ({
             inSession: true
         }))
@@ -30,7 +31,6 @@ export default class PanelComponent extends React.Component<Props, State> {
 
 
     onBackPress = (e) => {
-        console.log(e);
         this.setState(state => ({
             inSession: false
         }))
@@ -38,6 +38,7 @@ export default class PanelComponent extends React.Component<Props, State> {
 
 
     render() {
+        const ts = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
         return (
             <>
                 {this.state.inSession ? (
@@ -52,17 +53,19 @@ export default class PanelComponent extends React.Component<Props, State> {
 
 
                         <div className="flex-container">
-                            <CircleBarComponent title={"Title"} content={"data datatype"} percent={69}/>
-                            <CircleBarComponent title={"Title"} content={"data datatype"} percent={69}/>
-                            <CircleBarComponent title={"Title"} content={"data datatype"} percent={69}/>
+                            <CircleBarComponent title={"Title"} content={"Content"} percent={50}/>
+                            <CircleBarComponent title={"Accelaration"} content={"80%"} percent={80}/>
+                            <CircleBarComponent title={"Battery Voltage"} content={"45%"} percent={45}/>
                         </div>
 
 
                         <div className="grid-container">
-                            <div className="grid-item"><ChartComponent title={"Temperature"} data={[]}/></div>
-                            <div className="grid-item"><ChartComponent title={"Accelaration"} data={[]}/></div>
-                            <div className="grid-item"><ChartComponent title={"Battery Voltage"} data={[]}/>
-                            </div>
+                            <div className="grid-item"><ChartComponent title={"Temperature"}
+                                                                       chartStore={new ChartStore()}/></div>
+                            <div className="grid-item"><ChartComponent title={"Title"}
+                                                                       chartStore={new ChartStore()}/></div>
+                            <div className="grid-item"><ChartComponent title={"Battery Voltage"}
+                                                                       chartStore={new ChartStore()}/></div>
                             <div className="grid-item"><CardComponent>
                                 <div>...</div>
                             </CardComponent></div>

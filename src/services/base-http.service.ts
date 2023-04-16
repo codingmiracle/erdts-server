@@ -6,7 +6,7 @@ import { APIResponse } from "../dto/api/api-response";
 // Taken from https://github.com/arielweinberger/task-management-frontend/blob/master/src/services/base-http.service.js
 
 export default class BaseHttpService {
-    BASE_URL = process.env.BASE_URL || "http://localhost:3001";
+    BASE_URL = process.env.BASE_URL || "http://localhost:3030";
 
     //   _accessToken: string = null;
 
@@ -17,7 +17,7 @@ export default class BaseHttpService {
         Object.assign(options, this._getCommonOptions());
         return axios
             .get<APIResponse<T>>(`${this.BASE_URL}${endpoint}`, options)
-            .then((res: AxiosResponse<APIResponse<T>>) => res.data.data)
+            .then((res: AxiosResponse<APIResponse<T>>) => { console.log(res.data);res.data.data})
             .catch((error: AxiosError<APIErrorResponse>) =>
                 this._handleHttpError(error)
             );
